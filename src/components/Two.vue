@@ -1,12 +1,11 @@
 <template>
   <div>
-    <p>我是第一个子组件</p>
-    <!-- <button @click="getName">获取共享数据</button> -->
+    <p>我是第二个子组件</p>
   </div>
 </template>
 <script>
 export default {
-  name: 'One',
+  name: 'Two',
   methods: {
     getName () {
       console.log(this.$store.state.name)
@@ -16,7 +15,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 p{
-  background: #eeeeee;
+  background: #ee0;
 }
 
 </style>

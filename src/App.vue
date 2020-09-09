@@ -1,18 +1,25 @@
 <template>
   <div id="app">
-    <p>{{msg}}</p>
-    <button @click="say">我是按钮</button>
-    <One />
-    <button @click="getName">获取共享数据</button>
+    <!-- <p>{{msg}}</p>
+    <button @click="say">我是按钮</button> -->
+    <!-- <One />
+    <Two /> -->
+    <!-- <button @click="getName">获取共享数据</button> -->
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
+
+    <router-link to="/one">Go to One</router-link>
+    <router-link to="/two">Go to Two</router-link>
+
+    <router-view></router-view>
   </div>
 </template>
 <script>
-import One from './components/One'
+// import One from './components/One'
+// import Two from './components/Two'
 
 export default {
   name: 'App',
@@ -30,7 +37,8 @@ export default {
     }
   },
   components: {
-    One
+    // One,
+    // Two
   }
 }
 </script>
