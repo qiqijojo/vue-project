@@ -3,6 +3,7 @@
     <p>{{msg}}</p>
     <button @click="say">我是按钮</button>
     <One />
+    <button @click="getName">获取共享数据</button>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -14,7 +15,7 @@
 import One from './components/One'
 
 export default {
-  name: 'JOJO',
+  name: 'App',
   data: () => {
     return {
       msg: 'jojo'
@@ -22,7 +23,10 @@ export default {
   },
   methods: {
     say () {
-      console.log('0000', 'say')
+      console.log('say')
+    },
+    getName () {
+      console.log(this.$store.state.name)
     }
   },
   components: {
