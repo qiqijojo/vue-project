@@ -14,18 +14,24 @@
     <router-link to="/one">Go to One</router-link>
     <router-link to="/two">Go to Two</router-link>
 
+    <div>
+      <Son :name='name' />
+    </div>
+
     <router-view></router-view>
   </div>
 </template>
 <script>
 // import One from './components/One'
 // import Two from './components/Two'
+import Son from './components/Son'
 
 export default {
   name: 'App',
   data: () => {
     return {
-      msg: 'jojo'
+      msg: '我是父组件',
+      name: 'jojo'
     }
   },
   methods: {
@@ -39,6 +45,7 @@ export default {
   components: {
     // One,
     // Two
+    Son
   }
 }
 </script>
