@@ -1,46 +1,34 @@
 <template>
   <div id="app">
-    <button @click="say">我是按钮</button>
-    <p>{{name}}</p>
-
-    <router-link to="/one">Go to One</router-link>
-    <router-link to="/two">Go to Two</router-link>
-
-    <div>
-      <SonCom :parentName='name' @parentSay='say' />
-    </div>
-
-    <router-view></router-view>
+    <One @changeOne="changeNum" />
+    <Two :numTwo="num" />
+    App----{{num}}
   </div>
 </template>
 <script>
-import SonCom from './components/Son'
+import One from './components/One'
+import Two from './components/Two'
 
 export default {
   name: 'App',
   data: () => {
     return {
-      msg: '我是父组件',
-      name: 'jojo'
+      num: 0
     }
   },
   methods: {
-    say (data) {
-      console.log('我是App的方法')
-    },
-    getName () {
-      console.log(this.$store.state.name)
+    changeNum (data) {
+      console.log('00', data)
+      this.num = data
     }
   },
   components: {
-    SonCom
+    One,
+    Two
   }
 }
 </script>
 
 <style lang="scss">
-p {
-  background: #f00;
-  font-size: 20px;
-}
+
 </style>
