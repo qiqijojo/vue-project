@@ -17,8 +17,9 @@
         <div>我想多加点内容----2</div>
       </template> -->
 
-      <template #one>
+      <template slot-scope="abc">
         <div>我想多加点内容----1</div>
+        <div>局部作用域 --- {{abc.slotNames}}</div>
       </template>
       <template #two>
         <div>我想多加点内容----2</div>
