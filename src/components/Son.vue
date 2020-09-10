@@ -3,7 +3,7 @@
     我是子组件Son
     <div>{{parentName}}</div>
     <button @click="sonFunc">我是按钮</button>
-    <ChildCom :childName="parentName" @childSay="sonFunc" />
+    <ChildCom :childName="parentName" @childSay="sonFunc" ref="child" />
   </div>
 </template>
 <script>
@@ -24,6 +24,7 @@ export default {
   ],
   methods: {
     sonFunc () {
+      console.log('666', this.$refs.child)
       this.$emit('parentSay')
     }
   }
