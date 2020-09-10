@@ -1,10 +1,10 @@
 <template>
   <div>
-    One----<div>{{$store.state.name}}</div>
+    One----
     <button @click="add">增加</button>
     <button @click="sub">减少</button>
-    <input v-model="count" />
-    <input :value="count" />
+    <!-- <input v-model="count" /> -->
+    <input :value="this.$store.state.name" />
     <span>{{count}}</span>
   </div>
 </template>
@@ -18,12 +18,18 @@ export default {
   },
   methods: {
     add () {
-      this.count++
-      this.$emit('changeOne', this.count)
+      this.$store.commit('mAdd')
+      // this.$store.state.name = this.$store.state.name + 1
+
+      // this.count++
+      // this.$emit('changeOne', this.count)
     },
     sub () {
-      this.count--
-      this.$emit('changeOne', this.count)
+      this.$store.commit('mSub')
+      // this.$store.state.name = this.$store.state.name - 1
+
+      // this.count--
+      // this.$emit('changeOne', this.count)
     }
   }
 }

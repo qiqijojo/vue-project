@@ -5,9 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    name: '哈喽'
+    name: 0
   },
   mutations: {
+    mAdd: (state) => {
+      state.name = state.name + 1
+    },
+    mSub: (state) => {
+      state.name = state.name - 1
+    }
   },
   actions: {
   },
