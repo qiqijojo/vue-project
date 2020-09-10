@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <!-- <p>{{msg}}</p>
-    <button @click="say">我是按钮</button> -->
+    <button @click="say">我是按钮</button>
     <!-- <One />
     <Two /> -->
     <!-- <button @click="getName">获取共享数据</button> -->
@@ -15,7 +14,7 @@
     <router-link to="/two">Go to Two</router-link>
 
     <div>
-      <Son :name='name' />
+      <Son :name='name' @parentSay='say' />
     </div>
 
     <router-view></router-view>

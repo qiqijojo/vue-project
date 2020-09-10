@@ -2,6 +2,7 @@
   <div>
     我是子组件Son
     <div>{{name}}</div>
+    <button @click="sonFunc">我是按钮</button>
   </div>
 </template>
 <script>
@@ -14,6 +15,11 @@ export default {
   },
   props: [
     'name'
-  ]
+  ],
+  methods: {
+    sonFunc () {
+      this.$emit('parentSay')
+    }
+  }
 }
 </script>
