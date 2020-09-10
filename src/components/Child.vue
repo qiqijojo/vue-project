@@ -1,6 +1,8 @@
 <template>
   <div>
     <p>我是App的孙子组件----{{childName}}</p>
+    <slot>我是默认数据</slot>
+    <slot>我是默认数据</slot>
     <button @click="childFunc">我是按钮</button>
   </div>
 </template>

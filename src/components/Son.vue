@@ -3,7 +3,11 @@
     我是子组件Son
     <div>{{parentName}}</div>
     <button @click="sonFunc">我是按钮</button>
-    <ChildCom :childName="parentName" @childSay="sonFunc" ref="child" />
+    <ChildCom :childName="parentName" @childSay="sonFunc" ref="child">
+      <div>我想多加点内容</div>
+      <div>我想多加点内容</div>
+      <div>我想多加点内容</div>
+    </ChildCom>
   </div>
 </template>
 <script>
