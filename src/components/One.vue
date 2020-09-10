@@ -1,6 +1,6 @@
 <template>
   <div>
-    One----
+    One----<div>{{$store.state.name}}</div>
     <button @click="add">增加</button>
     <button @click="sub">减少</button>
     <input v-model="count" />

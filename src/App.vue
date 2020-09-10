@@ -2,7 +2,7 @@
   <div id="app">
     <One @changeOne="changeNum" />
     <Two :numTwo="num" />
-    App----{{num}}
+    App----{{num}}----{{$store.state.name}}
   </div>
 </template>
 <script>
