@@ -34,8 +34,8 @@ export default {
     }
   },
   methods: {
-    say () {
-      console.log('say')
+    say (data) {
+      console.log('say', data)
     },
     getName () {
       console.log(this.$store.state.name)

@@ -18,7 +18,7 @@ export default {
   ],
   methods: {
     sonFunc () {
-      this.$emit('parentSay')
+      this.$emit('parentSay', '哈哈！')
     }
   }
 }
