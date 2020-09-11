@@ -6,12 +6,13 @@
 
     <div>{{format}}</div>
 
-    <router-link to='/one' tag='button'>我是One</router-link>
-    <router-link to='/Two' tag='button'>我是Two</router-link>
+    <router-link to='/one?name=jojo&age=25' tag='button'>我是One</router-link>
+    <router-link to='/two/11111/222222' tag='button'>我是Two</router-link>
     <router-view />
   </div>
 </template>
 <script>
+
 // import One from './components/One'
 // import Two from './components/Two'
 

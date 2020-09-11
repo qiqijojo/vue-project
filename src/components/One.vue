@@ -16,6 +16,9 @@ export default {
       count: 0
     }
   },
+  created () {
+    console.log('one', this.$route)
+  },
   methods: {
     add () {
       this.$store.commit('mAdd')

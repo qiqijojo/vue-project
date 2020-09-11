@@ -9,6 +9,9 @@ export default {
   props: [
     'numTwo'
   ],
+  created () {
+    console.log('two', this.$route)
+  },
   methods: {
     getName () {
       console.log(this.$store.state.name)
