@@ -1,15 +1,19 @@
 <template>
   <div id="app">
-    <One @changeOne="changeNum" />
-    <Two :numTwo="num" />
+    <!-- <One @changeOne="changeNum" />
+    <Two :numTwo="num" /> -->
     App----{{num}}----{{$store.state.name}}
 
     <div>{{format}}</div>
+
+    <router-link to='/one' tag='button'>我是One</router-link>
+    <router-link to='/Two' tag='button'>我是Two</router-link>
+    <router-view />
   </div>
 </template>
 <script>
-import One from './components/One'
-import Two from './components/Two'
+// import One from './components/One'
+// import Two from './components/Two'
 
 export default {
   name: 'App',
@@ -32,12 +36,18 @@ export default {
     }
   },
   components: {
-    One,
-    Two
+    // One,
+    // Two
   }
 }
 </script>
 
 <style lang="scss">
+.my-active {
+  background: skyblue;
+}
+// .router-link-active {
+//   background: #f00;
+// }
 
 </style>

@@ -17,7 +17,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-p{
+div{
+  width: 100px;
+  height: 100px;
   background: #ee0;
 }
 

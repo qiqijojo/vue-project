@@ -32,10 +32,12 @@ import Two from '../components/Two'
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '/', redirect: '/one' },
   { path: '/one', component: One },
   { path: '/two', component: Two }
 ]
 const router = new VueRouter({
+  linkActiveClass: 'my-active',
   routes // (缩写) 相当于 routes: routes
 })
 
