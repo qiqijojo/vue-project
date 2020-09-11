@@ -3,6 +3,8 @@
     <One @changeOne="changeNum" />
     <Two :numTwo="num" />
     App----{{num}}----{{$store.state.name}}
+
+    <div>{{format}}</div>
   </div>
 </template>
 <script>
@@ -13,13 +15,20 @@ export default {
   name: 'App',
   data: () => {
     return {
-      num: 0
+      num: 0,
+      myMsg: 'English'
     }
   },
   methods: {
     changeNum (data) {
       console.log('00', data)
       this.num = data
+    }
+  },
+  computed: {
+    format () {
+      console.log('computed')
+      return this.myMsg + '你在那儿呢!'
     }
   },
   components: {

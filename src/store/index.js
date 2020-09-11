@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    name: 0
+    name: 0,
+    msg: 'jojo'
   },
   mutations: {
     mAdd: (state) => {
@@ -13,6 +14,12 @@ export default new Vuex.Store({
     },
     mSub: (state) => {
       state.name = state.name - 1
+    }
+  },
+  getters: {
+    format: (state) => {
+      console.log('getters')
+      return state.msg + '你好呀!'
     }
   },
   actions: {
