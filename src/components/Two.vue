@@ -24,8 +24,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 div{
-  width: 100px;
-  height: 100px;
+  width: 500px;
+  height: 500px;
   background: #ee0;
 }
 

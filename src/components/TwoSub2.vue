@@ -8,6 +8,8 @@ export default {
 </script>
 <style lang="scss" scoped>
   div {
+    width: 100px;
+    height: 100px;
     background:thistle;
   }
 </style>
