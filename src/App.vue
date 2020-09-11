@@ -28,13 +28,16 @@
 
     <!-- <p ref='ppp'>{{myMsg}}</p> -->
 
-    <button @click="changeMyMsg">修改数据</button>
-    <span ref='ppp'>{{myMsg}}</span>
+    <!-- <button @click="changeMyMsg">修改数据</button>
+    <span ref='ppp'>{{myMsg}}</span> -->
+
+    <button @click="changeShow">点击</button>
+    <One v-if="isShow" />
   </div>
 </template>
 <script>
 
-// import One from './components/One'
+import One from './components/One'
 // import Two from './components/Two'
 
 export default {
@@ -58,12 +61,12 @@ export default {
     // 老师演示是在vue调试工具上修改的数据,
     console.log('beforeUpdate', this.myMsg)
     console.log('beforeUpdate', this.$refs.ppp)
-    console.log('beforeUpdate', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
+    // console.log('beforeUpdate', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
   },
   updated () {
     console.log('updated', this.myMsg)
     console.log('updated', this.$refs.ppp)
-    console.log('updated', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
+    // console.log('updated', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
   },
   data: () => {
     return {
@@ -71,7 +74,8 @@ export default {
       myMsg: 'English',
       num1: 0,
       num2: 0,
-      sum: 0
+      sum: 0,
+      isShow: true
     }
   },
   watch: {
@@ -88,6 +92,9 @@ export default {
     }
   },
   methods: {
+    changeShow () {
+      this.isShow = !this.isShow
+    },
     changeMyMsg () {
       this.myMsg = 'newMsg：blablabla'
     },
@@ -110,7 +117,7 @@ export default {
     }
   },
   components: {
-    // One,
+    One
     // Two
   }
 }

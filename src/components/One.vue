@@ -19,6 +19,14 @@ export default {
   created () {
     console.log('one', this.$route)
   },
+  beforeDestroy () {
+    // 将最终需要操作数据的方法放在这里进行
+    console.log('beforeDestroy', this.count, this.add)
+  },
+  destroyed () {
+    // 在这个方法中不要去操作数据
+    console.log('destroyed', this.count, this.add)
+  },
   methods: {
     add () {
       this.$store.commit('mAdd')
