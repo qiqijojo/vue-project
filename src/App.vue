@@ -26,8 +26,10 @@
     <!-- <router-link to='/one?name=jojo&age=25' tag='button'>我是One</router-link>
     <router-link to='/two/11111/222222' tag='button'>我是Two</router-link> -->
 
-    <p ref='ppp'>{{myMsg}}</p>
+    <!-- <p ref='ppp'>{{myMsg}}</p> -->
 
+    <button @click="changeMyMsg">修改数据</button>
+    <span ref='ppp'>{{myMsg}}</span>
   </div>
 </template>
 <script>
@@ -37,6 +39,7 @@
 
 export default {
   name: 'App',
+  // 创建阶段
   beforeCreate () {
     console.log('beforeCreate', this.myMsg, this.changeNum)
   },
@@ -45,10 +48,22 @@ export default {
   },
   beforeMount () {
     console.log('beforeMount', this.$refs.ppp)
-    console.log('beforeMount', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
+    // console.log('beforeMount', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
   },
   mounted () {
     console.log('mounted', this.$refs.ppp)
+  },
+  // 运行阶段
+  beforeUpdate () {
+    // 老师演示是在vue调试工具上修改的数据,
+    console.log('beforeUpdate', this.myMsg)
+    console.log('beforeUpdate', this.$refs.ppp)
+    console.log('beforeUpdate', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
+  },
+  updated () {
+    console.log('updated', this.myMsg)
+    console.log('updated', this.$refs.ppp)
+    console.log('updated', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
   },
   data: () => {
     return {
@@ -73,6 +88,9 @@ export default {
     }
   },
   methods: {
+    changeMyMsg () {
+      this.myMsg = 'newMsg：blablabla'
+    },
     changeNum (data) {
       console.log('00', data)
       this.num = data
