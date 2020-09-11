@@ -17,11 +17,15 @@
     <span> = </span>
     <input v-model="sum" disabled /> -->
 
-     <input v-model="num1" />
+     <!-- <input v-model="num1" />
     <span> + </span>
     <input v-model="num2" />
     <span> = </span>
-    <input v-model="sum" disabled />
+    <input v-model="sum" disabled /> -->
+
+    <router-link to='/one?name=jojo&age=25' tag='button'>我是One</router-link>
+    <router-link to='/two/11111/222222' tag='button'>我是Two</router-link>
+
   </div>
 </template>
 <script>
@@ -48,6 +52,9 @@ export default {
     num2 (newValue, oldValue) {
       console.log(newValue, oldValue)
       this.sum = parseInt(this.num1 || 0) + parseInt(this.num2 || 0)
+    },
+    '$route.path': (newValue, oldValue) => {
+      console.log(newValue, oldValue)
     }
   },
   methods: {
