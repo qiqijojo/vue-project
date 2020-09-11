@@ -3,8 +3,8 @@ import VueRouter from 'vue-router'
 
 import One from '../components/One'
 import Two from '../components/Two'
-import TwoSub1 from '../components/TwoSub1'
-import TwoSub2 from '../components/TwoSub2'
+// import TwoSub1 from '../components/TwoSub1'
+// import TwoSub2 from '../components/TwoSub2'
 // import Home from '../views/Home.vue'
 
 // Vue.use(VueRouter)
@@ -36,23 +36,30 @@ Vue.use(VueRouter)
 const routes = [
   // { path: '/', redirect: '/one' },
   {
-    path: '/one',
-    component: One
-  },
-  {
-    path: '/two/:id1/:id2',
-    component: Two,
-    children: [
-      {
-        path: 'twoSub1',
-        component: TwoSub1
-      },
-      {
-        path: 'twoSub2',
-        component: TwoSub2
-      }
-    ]
+    path: '/',
+    components: {
+      name1: One,
+      name2: Two
+    }
   }
+  // {
+  //   path: '/one',
+  //   component: One
+  // },
+  // {
+  //   path: '/two/:id1/:id2',
+  //   component: Two,
+  //   children: [
+  //     {
+  //       path: 'twoSub1',
+  //       component: TwoSub1
+  //     },
+  //     {
+  //       path: 'twoSub2',
+  //       component: TwoSub2
+  //     }
+  //   ]
+  // }
 ]
 const router = new VueRouter({
   linkActiveClass: 'my-active',

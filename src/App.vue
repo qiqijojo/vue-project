@@ -8,7 +8,8 @@
 
     <router-link to='/one?name=jojo&age=25' tag='button'>我是One</router-link>
     <router-link to='/two/11111/222222' tag='button'>我是Two</router-link>
-    <router-view />
+    <router-view name='name1' />
+    <router-view name='name2' />
   </div>
 </template>
 <script>
