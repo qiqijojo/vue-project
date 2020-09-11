@@ -23,8 +23,10 @@
     <span> = </span>
     <input v-model="sum" disabled /> -->
 
-    <router-link to='/one?name=jojo&age=25' tag='button'>我是One</router-link>
-    <router-link to='/two/11111/222222' tag='button'>我是Two</router-link>
+    <!-- <router-link to='/one?name=jojo&age=25' tag='button'>我是One</router-link>
+    <router-link to='/two/11111/222222' tag='button'>我是Two</router-link> -->
+
+    <p ref='ppp'>{{myMsg}}</p>
 
   </div>
 </template>
@@ -35,6 +37,19 @@
 
 export default {
   name: 'App',
+  beforeCreate () {
+    console.log('beforeCreate', this.myMsg, this.changeNum)
+  },
+  created () {
+    console.log('created', this.myMsg, this.changeNum)
+  },
+  beforeMount () {
+    console.log('beforeMount', this.$refs.ppp)
+    console.log('beforeMount', document.querySelector('p').innerHTML, document.querySelector('p').innerText)
+  },
+  mounted () {
+    console.log('mounted', this.$refs.ppp)
+  },
   data: () => {
     return {
       num: 0,
