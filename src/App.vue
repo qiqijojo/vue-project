@@ -34,7 +34,7 @@
     <!-- <button @click="changeShow">点击</button>
     <One v-if="isShow" /> -->
 
-    <el-row>
+    <!-- <el-row>
       <el-button>默认按钮</el-button>
       <el-button type="primary">主要按钮</el-button>
       <el-button type="success">成功按钮</el-button>
@@ -48,7 +48,32 @@
         active-color="#13ce66"
         inactive-color="#ff4949">
       </el-switch>
-    </div>
+    </div> -->
+    <van-nav-bar
+      title="标题"
+      left-text="返回"
+      right-text="按钮"
+      left-arrow
+      @click-left="onClickLeft"
+      @click-right="onClickRight"
+    />
+    <van-card
+      num="2"
+      price="2.00"
+      desc="描述信息"
+      title="商品标题"
+      thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
+    />
+    <van-card
+      num="2"
+      tag="标签"
+      price="2.00"
+      desc="描述信息"
+      title="商品标题"
+      thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
+      origin-price="10.00"
+    />
+    <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" />
   </div>
 </template>
 <script>
@@ -109,6 +134,12 @@ export default {
     }
   },
   methods: {
+    onClickLeft () {
+      alert('返回')
+    },
+    onClickRight () {
+      alert('按钮')
+    },
     changeShow () {
       this.isShow = !this.isShow
     },

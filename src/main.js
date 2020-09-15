@@ -4,14 +4,20 @@ import router from './router'
 import store from './store'
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
-import { Row, Button, Switch } from 'element-ui'
+// import { Row, Button, Switch } from 'element-ui'
+import { NavBar, Button, SubmitBar, Card } from 'vant'
 
 // Vue.use(ElementUI)
-Vue.use(Row)
-Vue.use(Button)
-Vue.use(Switch)
+// Vue.use(Row)
+// Vue.use(Button)
+// Vue.use(Switch)
 
-// Vue.config.productionTip = false
+Vue.use(NavBar)
+Vue.use(Button)
+Vue.use(SubmitBar)
+Vue.use(Card)
+
+Vue.config.productionTip = false
 
 // new Vue({
 //   router,
@@ -24,4 +30,4 @@ new Vue({
   store,
   router,
   render: (h) => h(App)
-})
+}).$mount('#app')
