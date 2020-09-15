@@ -49,7 +49,7 @@
         inactive-color="#ff4949">
       </el-switch>
     </div> -->
-    <van-nav-bar
+    <!-- <van-nav-bar
       title="标题"
       left-text="返回"
       right-text="按钮"
@@ -73,13 +73,15 @@
       thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
       origin-price="10.00"
     />
-    <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" />
+    <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" /> -->
+    <Loading />
   </div>
 </template>
 <script>
 
 // import One from './components/One'
 // import Two from './components/Two'
+import Loading from './components/Loading'
 
 export default {
   name: 'App',
@@ -167,6 +169,7 @@ export default {
   components: {
     // One
     // Two
+    Loading
   }
 }
 </script>
