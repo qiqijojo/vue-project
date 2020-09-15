@@ -31,13 +31,29 @@
     <!-- <button @click="changeMyMsg">修改数据</button>
     <span ref='ppp'>{{myMsg}}</span> -->
 
-    <button @click="changeShow">点击</button>
-    <One v-if="isShow" />
+    <!-- <button @click="changeShow">点击</button>
+    <One v-if="isShow" /> -->
+
+    <el-row>
+      <el-button>默认按钮</el-button>
+      <el-button type="primary">主要按钮</el-button>
+      <el-button type="success">成功按钮</el-button>
+      <el-button type="info">信息按钮</el-button>
+      <el-button type="warning">警告按钮</el-button>
+      <el-button type="danger">危险按钮</el-button>
+    </el-row>
+    <div>
+      <el-switch
+        v-model="switchStatus"
+        active-color="#13ce66"
+        inactive-color="#ff4949">
+      </el-switch>
+    </div>
   </div>
 </template>
 <script>
 
-import One from './components/One'
+// import One from './components/One'
 // import Two from './components/Two'
 
 export default {
@@ -75,7 +91,8 @@ export default {
       num1: 0,
       num2: 0,
       sum: 0,
-      isShow: true
+      isShow: true,
+      switchStatus: true
     }
   },
   watch: {
@@ -117,7 +134,7 @@ export default {
     }
   },
   components: {
-    One
+    // One
     // Two
   }
 }
