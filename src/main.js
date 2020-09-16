@@ -18,7 +18,7 @@ import Loading from './plugin/loading/index'
 // Vue.use(SubmitBar)
 // Vue.use(Card)
 
-Vue.use(Loading)
+Vue.use(Loading, { title: '别着急啊...' })
 
 // Vue.config.productionTip = false
 

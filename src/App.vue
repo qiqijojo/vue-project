@@ -74,7 +74,7 @@
       origin-price="10.00"
     />
     <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" /> -->
-    <Loading></Loading>
+    <!-- <Loading></Loading> -->
 
   </div>
 </template>

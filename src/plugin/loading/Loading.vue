@@ -1,12 +1,17 @@
 <template>
   <div class="loading-container">
     <div class="loading-box" />
-    <div class="loading-text">正在加载中...</div>
+    <div class="loading-text">{{title}}</div>
   </div>
 </template>
 <script>
 export default {
-  name: 'Loading'
+  name: 'Loading',
+  data: () => {
+    return {
+      title: '正在加载中...'
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
