@@ -74,14 +74,15 @@
       origin-price="10.00"
     />
     <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" /> -->
-    <Loading />
+    <Loading></Loading>
+
   </div>
 </template>
 <script>
 
 // import One from './components/One'
 // import Two from './components/Two'
-import Loading from './components/Loading'
+// import Loading from './components/Loading'
 
 export default {
   name: 'App',
@@ -169,7 +170,7 @@ export default {
   components: {
     // One
     // Two
-    Loading
+    // Loading
   }
 }
 </script>
