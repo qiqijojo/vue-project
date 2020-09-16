@@ -22,5 +22,12 @@ export default {
     Vue.hideLoading = function () {
       LoadingInstance.isShow = false
     }
+    // 添加实例方法
+    Vue.prototype.$showLoading = function () {
+      LoadingInstance.isShow = true
+    }
+    Vue.prototype.$hideLoading = function () {
+      LoadingInstance.isShow = false
+    }
   }
 }

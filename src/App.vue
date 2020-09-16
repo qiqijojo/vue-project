@@ -85,7 +85,7 @@
 // import One from './components/One'
 // import Two from './components/Two'
 // import Loading from './components/Loading'
-import Vue from 'vue'
+// import Vue from 'vue'
 
 export default {
   name: 'App',
@@ -141,10 +141,12 @@ export default {
   },
   methods: {
     handleShow () {
-      Vue.showLoading()
+      this.$showLoading()
+      // Vue.showLoading()
     },
     handleHide () {
-      Vue.hideLoading()
+      this.$hideLoading()
+      // Vue.hideLoading()
     },
     onClickLeft () {
       alert('返回')
