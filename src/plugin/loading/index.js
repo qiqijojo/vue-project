@@ -9,10 +9,18 @@ export default {
     let LoadingInstance = new LoadingConstructor()
     const oDiv = document.createElement('div')
     document.body.append(oDiv)
-    console.log('000', LoadingInstance, options)
-    // LoadingInstance.tile = options.title
     LoadingInstance.$mount(oDiv)
-    LoadingInstance.title = options.title
 
+    if (options && options.title !== null && options.title !== undefined) {
+      LoadingInstance.title = options.title
+    }
+
+    // 添加全局方法
+    Vue.showLoading = function () {
+      LoadingInstance.isShow = true
+    }
+    Vue.hideLoading = function () {
+      LoadingInstance.isShow = false
+    }
   }
 }

@@ -76,6 +76,8 @@
     <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" /> -->
     <!-- <Loading></Loading> -->
 
+    <button @click="handleShow">显示</button>
+    <button @click="handleHide">隐藏</button>
   </div>
 </template>
 <script>
@@ -83,6 +85,7 @@
 // import One from './components/One'
 // import Two from './components/Two'
 // import Loading from './components/Loading'
+import Vue from 'vue'
 
 export default {
   name: 'App',
@@ -137,6 +140,12 @@ export default {
     }
   },
   methods: {
+    handleShow () {
+      Vue.showLoading()
+    },
+    handleHide () {
+      Vue.hideLoading()
+    },
     onClickLeft () {
       alert('返回')
     },

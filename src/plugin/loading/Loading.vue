@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-container">
+  <div class="loading-container" v-if="isShow">
     <div class="loading-box" />
     <div class="loading-text">{{title}}</div>
   </div>
@@ -9,7 +9,8 @@ export default {
   name: 'Loading',
   data: () => {
     return {
-      title: '正在加载中...'
+      title: '正在加载中...',
+      isShow: true
     }
   }
 }
